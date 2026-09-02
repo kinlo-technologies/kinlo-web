@@ -1,6 +1,6 @@
 import { Fragment, type ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
-import { hostPerks } from "@/lib/data";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 const perkIcons: ReactNode[] = [
   <Fragment key="calendar">
@@ -14,35 +14,31 @@ const perkIcons: ReactNode[] = [
   <path key="shield" d="M12 2 3 6v6c0 5 4 8 9 10 5-2 9-5 9-10V6z" />,
 ];
 
-export function ForOrganizers() {
+export function ForOrganizers({ dict }: { dict: Dictionary }) {
   return (
     <section id="organizers" className="py-24">
       <div className="mx-auto max-w-6xl px-8">
         <div className="grid grid-cols-1 items-center gap-14 rounded-(--radius-lg) bg-(--color-deep-jungle) p-11 text-white md:grid-cols-2">
           <div>
             <span className="mb-3.5 block text-[13px] font-bold tracking-[0.08em] text-(--color-ocean-teal) uppercase">
-              For Organizers
+              {dict.forOrganizers.eyebrow}
             </span>
             <h2 className="font-display mb-[18px] text-[36px] leading-tight font-bold text-white">
-              Run your community. We&apos;ll handle the rest.
+              {dict.forOrganizers.title}
             </h2>
-            <p className="mb-[30px] text-[17px] text-white/72">
-              Stop stitching together group chats, spreadsheets, and payment links. Kinlo gives
-              hosts and organizers one place to list experiences, manage guests, and get paid —
-              with real people finding you through belonging, not just a feed.
-            </p>
+            <p className="mb-[30px] text-[17px] text-white/72">{dict.forOrganizers.description}</p>
             <div className="flex flex-wrap gap-3.5">
               <Button href="#" variant="clay">
-                Become an Organizer
+                {dict.forOrganizers.ctaPrimary}
               </Button>
               <Button href="#" variant="ghost-on-dark">
-                See host perks
+                {dict.forOrganizers.ctaSecondary}
               </Button>
             </div>
           </div>
 
           <div className="flex flex-col gap-5">
-            {hostPerks.map((perk, i) => (
+            {dict.forOrganizers.perks.map((perk, i) => (
               <div key={perk.title} className="flex items-start gap-3.5">
                 <div className="flex h-[38px] w-[38px] flex-shrink-0 items-center justify-center rounded-[10px] bg-white/10">
                   <svg

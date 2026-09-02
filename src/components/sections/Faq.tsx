@@ -1,13 +1,13 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { faqs } from "@/lib/data";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-export function Faq() {
+export function Faq({ dict }: { dict: Dictionary }) {
   return (
     <section id="about" className="py-24">
       <div className="mx-auto max-w-6xl px-8">
-        <SectionHeading eyebrow="Good to Know" title="Kinlo, answered." />
+        <SectionHeading eyebrow={dict.faq.eyebrow} title={dict.faq.title} />
         <div className="mx-auto flex max-w-3xl flex-col gap-3">
-          {faqs.map((item, i) => (
+          {dict.faq.items.map((item, i) => (
             <details
               key={item.question}
               open={i === 0}

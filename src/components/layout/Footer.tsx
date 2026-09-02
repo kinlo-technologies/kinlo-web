@@ -1,64 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-const columns: { title: string; links: { label: string; href: string }[] }[] = [
-  {
-    title: "Product",
-    links: [
-      { label: "Explore", href: "#explore" },
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "Communities", href: "#community" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "#about" },
-      { label: "Careers", href: "#" },
-      { label: "Press", href: "#" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { label: "Help Center", href: "#" },
-      { label: "Contact Us", href: "#" },
-      { label: "Safety", href: "#" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
-      { label: "Cookies", href: "#" },
-    ],
-  },
-];
-
-export function Footer() {
+export function Footer({ dict }: { dict: Dictionary }) {
   return (
     <footer className="bg-(--color-charcoal) py-[72px] text-white/85">
       <div className="mx-auto max-w-6xl px-8">
         <div className="grid grid-cols-2 gap-10 pb-14 md:grid-cols-5 md:gap-10">
           <div className="col-span-2">
-            <Link href="#top" className="flex items-center gap-2.5">
+            <Link href="#top" className="flex items-center">
               <Image
-                src="/images/kinlo-logo-icon-white.png"
-                alt="Kinlo"
-                width={26}
-                height={26}
+                src="/images/kinlo-logo-lockup-white.png"
+                alt="Kinlo — Belong anywhere."
+                width={2646}
+                height={786}
+                className="h-11 w-auto"
               />
-              <span className="font-display text-xl font-bold tracking-[0.06em] text-white">
-                KINLO
-              </span>
             </Link>
-            <p className="mt-3.5 max-w-[240px] text-sm text-white/50">
-              Kinlo is more than an app. It&apos;s your community, anywhere.
-            </p>
+            <p className="mt-3.5 max-w-[240px] text-sm text-white/50">{dict.footer.tagline}</p>
           </div>
 
-          {columns.map((col) => (
+          {dict.footer.columns.map((col) => (
             <div key={col.title}>
               <h5 className="mb-4 text-xs font-bold tracking-[0.06em] text-white/45 uppercase">
                 {col.title}
@@ -80,8 +42,8 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-2 border-t border-white/12 pt-6 text-[13px] text-white/42 sm:flex-row sm:justify-between">
-          <span>© 2026 Kinlo. All rights reserved.</span>
-          <span>Made for people who belong anywhere.</span>
+          <span>{dict.footer.copyright}</span>
+          <span>{dict.footer.madeFor}</span>
         </div>
       </div>
     </footer>

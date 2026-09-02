@@ -2,10 +2,11 @@
 
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export function WaitlistForm() {
+export function WaitlistForm({ dict }: { dict: Dictionary }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState<string | null>(null);
@@ -25,33 +26,30 @@ export function WaitlistForm() {
 
       if (!res.ok) {
         setStatus("error");
-        setMessage(data.error ?? "Something went wrong. Try again.");
+        setMessage(data.error ?? dict.waitlist.errorGeneric);
         return;
       }
 
       setStatus("success");
-      setMessage("You're on the list — we'll email you when Kinlo lands in your city.");
+      setMessage(dict.waitlist.successMessage);
       setEmail("");
     } catch {
       setStatus("error");
-      setMessage("Network error. Check your connection and try again.");
+      setMessage(dict.waitlist.errorNetwork);
     }
   }
 
   return (
     <div className="mx-auto mb-7 max-w-[420px]">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-3 sm:flex-row sm:gap-2.5"
-      >
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:gap-2.5">
         <label htmlFor="waitlist-email" className="sr-only">
-          Email address
+          {dict.waitlist.emailLabel}
         </label>
         <input
           id="waitlist-email"
           type="email"
           required
-          placeholder="you@example.com"
+          placeholder={dict.waitlist.emailPlaceholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="h-[50px] flex-1 rounded-[12px] border-[1.5px] border-black/[0.18] bg-white px-[18px] text-[15px] focus:border-(--color-ocean-teal) focus:outline-none"
@@ -62,7 +60,7 @@ export function WaitlistForm() {
           className="h-[50px]"
           disabled={status === "loading"}
         >
-          {status === "loading" ? "Joining…" : "Join Waitlist"}
+          {status === "loading" ? dict.waitlist.submitting : dict.waitlist.submit}
         </Button>
       </form>
       {message ? (
