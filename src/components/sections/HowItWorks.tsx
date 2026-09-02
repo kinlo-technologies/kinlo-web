@@ -19,7 +19,7 @@ const stepIcons: ReactNode[] = [
 
 export function HowItWorks({ dict }: { dict: Dictionary }) {
   return (
-    <section id="how-it-works" className="py-24">
+    <section id="how-it-works" className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-8">
         <SectionHeading
           eyebrow={dict.howItWorks.eyebrow}

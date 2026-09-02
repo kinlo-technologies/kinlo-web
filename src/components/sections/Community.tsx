@@ -10,7 +10,7 @@ const avatarTone: Record<string, string> = {
 
 export function Community({ dict }: { dict: Dictionary }) {
   return (
-    <section id="community" className="py-24">
+    <section id="community" className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-8">
         <div className="overflow-hidden rounded-(--radius-lg) bg-(--color-surface) shadow-(--shadow-card)">
           <div className="px-8 pt-16 pb-12 md:px-16">
@@ -47,11 +47,15 @@ export function Community({ dict }: { dict: Dictionary }) {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 bg-(--color-deep-jungle) px-8 py-10 text-white md:px-16">
+          <div className="grid grid-cols-3 gap-3 bg-(--color-deep-jungle) px-5 py-10 text-white sm:gap-6 sm:px-8 md:px-16">
             {launchStats.map((stat, i) => (
               <div key={stat.value} className="text-center">
-                <strong className="font-display block text-[34px]">{stat.value}</strong>
-                <span className="text-[13.5px] text-white/65">{dict.community.stats[i]}</span>
+                <strong className="font-display block text-[22px] sm:text-[34px]">
+                  {stat.value}
+                </strong>
+                <span className="text-[12px] text-white/65 sm:text-[13.5px]">
+                  {dict.community.stats[i]}
+                </span>
               </div>
             ))}
           </div>

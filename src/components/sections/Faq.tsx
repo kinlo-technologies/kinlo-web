@@ -3,7 +3,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 
 export function Faq({ dict }: { dict: Dictionary }) {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-8">
         <SectionHeading eyebrow={dict.faq.eyebrow} title={dict.faq.title} />
         <div className="mx-auto flex max-w-3xl flex-col gap-3">

@@ -11,7 +11,7 @@ const toneClasses: Record<string, string> = {
 
 export function Categories({ dict }: { dict: Dictionary }) {
   return (
-    <section id="explore" className="pt-0 pb-24">
+    <section id="explore" className="pt-0 pb-14 md:pb-24">
       <div className="mx-auto max-w-6xl px-8">
         <SectionHeading eyebrow={dict.categories.eyebrow} title={dict.categories.title} />
         <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 md:grid-cols-5">

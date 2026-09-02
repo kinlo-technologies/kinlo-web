@@ -7,7 +7,7 @@ export function Footer({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   return (
     <footer className="bg-(--color-charcoal) py-[72px] text-white/85">
       <div className="mx-auto max-w-6xl px-8">
-        <div className="grid grid-cols-2 gap-10 pb-14 md:grid-cols-5 md:gap-10">
+        <div className="grid grid-cols-2 gap-10 pb-14 md:grid-cols-6 md:gap-10">
           <div className="col-span-2">
             <Link href={`/${lang}#top`} className="flex items-center">
               <Image

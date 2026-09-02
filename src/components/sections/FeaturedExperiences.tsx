@@ -5,7 +5,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 
 export function FeaturedExperiences({ dict }: { dict: Dictionary }) {
   return (
-    <section className="py-24">
+    <section className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-8">
         <SectionHeading
           eyebrow={dict.featured.eyebrow}

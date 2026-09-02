@@ -16,9 +16,9 @@ const perkIcons: ReactNode[] = [
 
 export function ForOrganizers({ dict }: { dict: Dictionary }) {
   return (
-    <section id="organizers" className="py-24">
+    <section id="organizers" className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-8">
-        <div className="grid grid-cols-1 items-center gap-14 rounded-(--radius-lg) bg-(--color-deep-jungle) p-11 text-white md:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-10 rounded-(--radius-lg) bg-(--color-deep-jungle) p-6 text-white sm:gap-14 sm:p-11 md:grid-cols-2">
           <div>
             <span className="mb-3.5 block text-[13px] font-bold tracking-[0.08em] text-(--color-ocean-teal) uppercase">
               {dict.forOrganizers.eyebrow}

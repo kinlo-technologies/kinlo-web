@@ -20,9 +20,9 @@ export function Waitlist({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <section id="download" className="py-24">
+    <section id="download" className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-8">
-        <div className="rounded-(--radius-lg) bg-(--color-limestone) p-11 text-center">
+        <div className="rounded-(--radius-lg) bg-(--color-limestone) p-6 text-center sm:p-11">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-(--color-surface) px-4 py-2 text-[13px] font-semibold text-(--color-text-secondary) shadow-(--shadow-soft)">
             <span className="h-[7px] w-[7px] rounded-full bg-(--color-sunset-clay)" />
             {dict.waitlist.badge}
@@ -36,17 +36,17 @@ export function Waitlist({ dict }: { dict: Dictionary }) {
 
           <WaitlistForm dict={dict} />
 
-          <div className="flex justify-center gap-3.5">
+          <div className="flex justify-center gap-2.5 sm:gap-3.5">
             {badges.map((badge) => (
               <div
                 key={badge.label}
-                className="flex cursor-not-allowed items-center gap-2.5 rounded-[10px] bg-(--color-charcoal) px-5 py-2.5 text-white opacity-50"
+                className="flex cursor-not-allowed items-center gap-2 rounded-[10px] bg-(--color-charcoal) px-3 py-2 text-white opacity-50 sm:gap-2.5 sm:px-5 sm:py-2.5"
                 aria-disabled
               >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0">
                   {badge.icon}
                 </svg>
-                <div className="text-left">
+                <div className="text-left whitespace-nowrap">
                   <small className="block text-[10px] text-white/60">{dict.waitlist.comingTo}</small>
                   <strong className="text-sm">{badge.label}</strong>
                 </div>
