@@ -30,7 +30,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Faq dict={dict} />
         <Waitlist dict={dict} />
       </main>
-      <Footer dict={dict} />
+      <Footer dict={dict} lang={lang} />
     </>
   );
 }

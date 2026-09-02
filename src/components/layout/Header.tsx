@@ -6,18 +6,18 @@ import type { Locale } from "@/i18n/config";
 
 export function Header({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   const links = [
-    { href: "#explore", label: dict.nav.explore },
-    { href: "#how-it-works", label: dict.nav.howItWorks },
-    { href: "#organizers", label: dict.nav.forOrganizers },
-    { href: "#community", label: dict.nav.community },
-    { href: "#about", label: dict.nav.about },
+    { href: `/${lang}#explore`, label: dict.nav.explore },
+    { href: `/${lang}#how-it-works`, label: dict.nav.howItWorks },
+    { href: `/${lang}#organizers`, label: dict.nav.forOrganizers },
+    { href: `/${lang}#community`, label: dict.nav.community },
+    { href: `/${lang}#about`, label: dict.nav.about },
   ];
   const otherLang: Locale = lang === "en" ? "es" : "en";
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/[0.08] bg-(--color-warm-sand)/85 backdrop-blur-md">
       <div className="mx-auto flex h-[84px] max-w-6xl items-center justify-between px-8">
-        <Link href="#top" className="flex items-center">
+        <Link href={`/${lang}#top`} className="flex items-center">
           <Image
             src="/images/kinlo-logo-lockup.png"
             alt="Kinlo — Belong anywhere."
@@ -47,7 +47,7 @@ export function Header({ dict, lang }: { dict: Dictionary; lang: Locale }) {
           >
             {otherLang}
           </Link>
-          <Button href="#download" size="sm">
+          <Button href={`/${lang}#download`} size="sm">
             {dict.nav.getTheApp}
           </Button>
         </div>

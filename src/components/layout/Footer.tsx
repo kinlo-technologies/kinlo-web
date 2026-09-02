@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
+import type { Locale } from "@/i18n/config";
 
-export function Footer({ dict }: { dict: Dictionary }) {
+export function Footer({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   return (
     <footer className="bg-(--color-charcoal) py-[72px] text-white/85">
       <div className="mx-auto max-w-6xl px-8">
         <div className="grid grid-cols-2 gap-10 pb-14 md:grid-cols-5 md:gap-10">
           <div className="col-span-2">
-            <Link href="#top" className="flex items-center">
+            <Link href={`/${lang}#top`} className="flex items-center">
               <Image
                 src="/images/kinlo-logo-lockup-white.png"
                 alt="Kinlo — Belong anywhere."
@@ -28,12 +29,12 @@ export function Footer({ dict }: { dict: Dictionary }) {
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      href={`/${lang}${link.href}`}
                       className="text-[14.5px] text-white/78 transition-colors hover:text-white"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

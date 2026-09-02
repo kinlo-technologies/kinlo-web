@@ -188,29 +188,135 @@ const en = {
         title: "Company",
         links: [
           { label: "About", href: "#about" },
-          { label: "Careers", href: "#" },
-          { label: "Press", href: "#" },
+          { label: "Careers", href: "/careers" },
         ],
       },
       {
         title: "Support",
         links: [
-          { label: "Help Center", href: "#" },
-          { label: "Contact Us", href: "#" },
-          { label: "Safety", href: "#" },
+          { label: "Help Center", href: "/help" },
+          { label: "Contact Us", href: "/contact" },
+          { label: "Safety", href: "/safety" },
         ],
       },
       {
         title: "Legal",
         links: [
-          { label: "Privacy", href: "#" },
-          { label: "Terms", href: "#" },
-          { label: "Cookies", href: "#" },
+          { label: "Privacy", href: "/privacy" },
+          { label: "Terms", href: "/terms" },
+          { label: "Cookies", href: "/cookies" },
         ],
       },
     ],
     copyright: "© 2026 Kinlo. All rights reserved.",
     madeFor: "Made for people who belong anywhere.",
+  },
+  pages: {
+    backHome: "Back to home",
+    privacy: {
+      title: "Privacy Policy",
+      updated: "Last updated September 2026",
+      intro:
+        "Kinlo is currently in pre-launch, so here's a plain-language look at the little data we collect today. We'll expand this policy as the product grows.",
+      sections: [
+        {
+          heading: "Information we collect",
+          body: "When you join our waitlist, we collect the email address and city you provide. That's it — Kinlo doesn't have a live app yet, so we're not collecting anything beyond that.",
+        },
+        {
+          heading: "How we use your information",
+          body: "We use your email to notify you when Kinlo launches in your city, and your city to help us decide where to launch next. We won't use it for anything else, and we won't sell it to anyone.",
+        },
+        {
+          heading: "Data storage & security",
+          body: "Your information is stored securely and is only accessible to the Kinlo team.",
+        },
+        {
+          heading: "Your rights",
+          body: "You can ask us to remove your information from our waitlist at any time by emailing us at admin@kinlo.com.",
+        },
+        {
+          heading: "Changes to this policy",
+          body: "We may update this policy as Kinlo grows. We'll post any changes here.",
+        },
+      ],
+    },
+    terms: {
+      title: "Terms of Service",
+      updated: "Last updated September 2026",
+      intro:
+        "Kinlo is currently in pre-launch. These terms cover your use of this website and our waitlist, and we'll expand them once the Kinlo app is live.",
+      sections: [
+        {
+          heading: "Joining the waitlist",
+          body: "By submitting your email and city, you agree to receive occasional emails from us about our launch. You can unsubscribe at any time.",
+        },
+        {
+          heading: "No guarantee of launch date or location",
+          body: "Joining the waitlist doesn't guarantee that Kinlo will launch in your city, or by any particular date. We'll do our best to keep you updated.",
+        },
+        {
+          heading: "Acceptable use",
+          body: "Don't use this site to do anything illegal, harmful, or disruptive to other users or to Kinlo.",
+        },
+        {
+          heading: "Changes to these terms",
+          body: "We may update these terms as our product evolves. Continued use of the site after changes means you accept the updated terms.",
+        },
+      ],
+    },
+    cookies: {
+      title: "Cookies Policy",
+      updated: "Last updated September 2026",
+      intro: "A short one, since this site doesn't do much with cookies yet.",
+      sections: [
+        {
+          heading: "Our current use of cookies",
+          body: "Kinlo's website does not currently use tracking, advertising, or analytics cookies. We may use essential cookies required for basic site functionality, such as remembering your language preference.",
+        },
+        {
+          heading: "Future updates",
+          body: "As we build out the Kinlo app, this policy will be updated to reflect any additional cookies or similar technologies we use.",
+        },
+      ],
+    },
+    contact: {
+      title: "Contact Us",
+      intro: "Have a question, feedback, or just want to say hi? We'd love to hear from you.",
+      emailLabel: "Email us at",
+      email: "admin@kinlo.com",
+    },
+    safety: {
+      title: "Safety",
+      intro: "Safety is something we're building into Kinlo from day one, not bolting on later.",
+      sections: [
+        {
+          heading: "Verified hosts",
+          body: "Every host on Kinlo is manually reviewed and approved before they can list an experience — no automated rubber-stamping.",
+        },
+        {
+          heading: "Community guidelines",
+          body: "We're building Kinlo around real, respectful connection. Harassment, discrimination, and unsafe behavior have no place in our community, and we're building reporting and moderation tools in from the start.",
+        },
+        {
+          heading: "Reporting a concern",
+          body: "If you ever have a safety concern, email us directly at admin@kinlo.com and we'll respond as quickly as we can.",
+        },
+      ],
+    },
+    careers: {
+      title: "Careers",
+      body: "We're not hiring right now — Kinlo is still a small team heads-down on getting ready to launch in Tulum. But we're growing, so check back later.",
+      body2: "Want to stay in the loop for future openings? Reach out at admin@kinlo.com.",
+    },
+    help: {
+      title: "Help Center",
+      intro:
+        "Kinlo isn't live yet, so there's no app to troubleshoot just yet! In the meantime, check the FAQ on our homepage — or reach out directly.",
+      faqLinkLabel: "Read the FAQ",
+      emailLabel: "Still stuck? Email us at",
+      email: "admin@kinlo.com",
+    },
   },
 };
 
