@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -7,12 +6,14 @@ export function Hero({ dict }: { dict: Dictionary }) {
     <section className="pt-14 pb-24">
       <div className="mx-auto max-w-6xl px-8">
         <div className="overflow-hidden rounded-[20px] shadow-(--shadow-card)">
-          <Image
-            src="/images/hero-banner.png"
-            alt={dict.hero.imageAlt}
-            width={1672}
-            height={941}
-            priority
+          <video
+            src="/videos/hero.mp4"
+            poster="/images/hero-poster.jpg"
+            aria-label={dict.hero.imageAlt}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full"
           />
         </div>
