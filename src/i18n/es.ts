@@ -116,7 +116,7 @@ const es: Dictionary = {
       {
         quote:
           "Me mudé a una ciudad nueva sin conocer a nadie. Tres meses en Kinlo y ya tengo un grupo de running al que le digo familia.",
-        location: "Lisboa, Portugal",
+        location: "Austin, TX",
       },
       {
         quote: "Como trabajador remoto, Kinlo es cómo encuentro a mi gente en cada ciudad donde aterrizo.",
@@ -125,7 +125,7 @@ const es: Dictionary = {
       {
         quote:
           "No se siente como una app de eventos. Se siente como si realmente quisiera que pertenecieras a algún lugar.",
-        location: "Nairobi, Kenia",
+        location: "Barcelona, España",
       },
     ],
     stats: ["Ciudad de lanzamiento — oct 2026", "Idiomas al lanzamiento (EN·ES)", "Anfitriones verificados"],
@@ -142,7 +142,7 @@ const es: Dictionary = {
       {
         question: "¿Para quién es Kinlo?",
         answer:
-          "Trabajadores remotos, viajeros, nómadas digitales, expatriados, creativos y emprendedores — además de comunidades de bienestar, fitness, comida y arte que buscan a su gente en un nuevo lugar.",
+          "Para cualquier persona que quiera sentirse en casa en algún lugar — ya sea que acabas de mudarte, estás de paso, o llevas años ahí y estás listo para encontrar a tu gente. Si buscas una conexión real, no solo un lugar que marcar en una lista, Kinlo es para ti.",
       },
       {
         question: "¿Cómo me convierto en anfitrión u organizador?",
@@ -163,11 +163,14 @@ const es: Dictionary = {
       "Kinlo aún no está disponible — únete a la lista de espera para acceso anticipado y sé el primero en saber cuándo llegamos a tu ciudad.",
     emailLabel: "Correo electrónico",
     emailPlaceholder: "tu@ejemplo.com",
+    cityLabel: "Ciudad",
+    cityPlaceholder: "¿En qué ciudad estás?",
     submit: "Unirme a la Lista",
     submitting: "Uniendo…",
     successMessage: "Ya estás en la lista — te escribiremos cuando Kinlo llegue a tu ciudad.",
     errorGeneric: "Algo salió mal. Intenta de nuevo.",
     errorNetwork: "Error de conexión. Revisa tu internet e intenta de nuevo.",
+    errorCity: "Cuéntanos en qué ciudad estás.",
     comingTo: "Próximamente en",
     appStore: "App Store",
     googlePlay: "Google Play",

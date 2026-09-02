@@ -15,7 +15,7 @@ export function Community({ dict }: { dict: Dictionary }) {
         <div className="overflow-hidden rounded-(--radius-lg) bg-(--color-surface) shadow-(--shadow-card)">
           <div className="px-8 pt-16 pb-12 md:px-16">
             <SectionHeading eyebrow={dict.community.eyebrow} title={dict.community.title} />
-            <div className="-mt-14 grid grid-cols-1 gap-[22px] md:grid-cols-3">
+            <div className="-mt-6 grid grid-cols-1 gap-[22px] md:grid-cols-3">
               {testimonials.map((t, i) => {
                 const text = dict.community.testimonials[i];
                 return (

@@ -56,9 +56,9 @@ export type Testimonial = {
 // Illustrative content for design review — replace with real users post-launch.
 // Order mirrors dict.community.testimonials in the i18n dictionaries (quote/location text).
 export const testimonials: Testimonial[] = [
-  { name: "Priya M.", initials: "PM", tone: "teal" },
+  { name: "Maya R.", initials: "MR", tone: "teal" },
   { name: "Dario S.", initials: "DS", tone: "clay" },
-  { name: "Aisha K.", initials: "AK", tone: "jungle" },
+  { name: "Sofia L.", initials: "SL", tone: "jungle" },
 ];
 
 // Order mirrors dict.community.stats in the i18n dictionaries (label text).

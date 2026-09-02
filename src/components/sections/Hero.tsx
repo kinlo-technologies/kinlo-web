@@ -3,7 +3,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 
 export function Hero({ dict }: { dict: Dictionary }) {
   return (
-    <section className="pt-14 pb-24">
+    <section className="pt-14 pb-16">
       <div className="mx-auto max-w-6xl px-8">
         <div className="overflow-hidden rounded-[20px] shadow-(--shadow-card)">
           <video

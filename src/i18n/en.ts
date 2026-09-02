@@ -114,7 +114,7 @@ const en = {
       {
         quote:
           "I moved to a new city knowing no one. Three months on Kinlo and I have a running group I'd call family.",
-        location: "Lisbon, Portugal",
+        location: "Austin, TX",
       },
       {
         quote: "As a remote worker, Kinlo is how I find my people in every city I land in.",
@@ -123,7 +123,7 @@ const en = {
       {
         quote:
           "It doesn't feel like an events app. It feels like it actually wants you to belong somewhere.",
-        location: "Nairobi, Kenya",
+        location: "Barcelona, Spain",
       },
     ],
     stats: ["Launch city — Oct 2026", "Languages at launch (EN·ES)", "Hosts verified"],
@@ -140,7 +140,7 @@ const en = {
       {
         question: "Who is Kinlo for?",
         answer:
-          "Remote workers, travelers, digital nomads, expats, creatives and entrepreneurs — plus wellness, fitness, food, and art communities looking for their people in a new place.",
+          "Anyone who wants to feel at home somewhere — whether you just moved, you're passing through, or you've lived there for years and are ready to find your people. If you're looking for real connection, not just a place to check off a list, Kinlo is for you.",
       },
       {
         question: "How do I become a host or organizer?",
@@ -161,11 +161,14 @@ const en = {
       "Kinlo isn't live yet — join the waitlist for early access and be first to know when we launch in your city.",
     emailLabel: "Email address",
     emailPlaceholder: "you@example.com",
+    cityLabel: "City",
+    cityPlaceholder: "Which city are you in?",
     submit: "Join Waitlist",
     submitting: "Joining…",
     successMessage: "You're on the list — we'll email you when Kinlo lands in your city.",
     errorGeneric: "Something went wrong. Try again.",
     errorNetwork: "Network error. Check your connection and try again.",
+    errorCity: "Tell us which city you're in.",
     comingTo: "Coming to",
     appStore: "App Store",
     googlePlay: "Google Play",
